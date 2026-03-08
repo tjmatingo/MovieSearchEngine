@@ -2,8 +2,10 @@ import MovieCard from "../components/MovieCard";
 import { useState } from "react";
 
 function Home() {
+    // states for the search bar and filtering fucntionality 
     const [searchQuery, setSearchQuery] = useState("");
     
+    // dummy data for testing filter function
     const movies = [
         {id: 1, title: "How to Train a Dragon", release_date: "2025"},
         {id: 2, title: "Avatar: The Last Air bender", release_date: "2012"},
@@ -12,6 +14,7 @@ function Home() {
 
     ]
 
+    // function for dealing with the form submission
     const handleSearch = (e) => {
         e.preventDefault();
         alert(searchQuery);
@@ -25,6 +28,7 @@ function Home() {
             </form>
             
             <div className="movies-grid">
+                {/* looping array of objects in test data */}
                 {movies.map(movie => (
                     movie.title.toLowerCase().startsWith(searchQuery) && <MovieCard movie={movie} key={movie.id}></MovieCard>
                 ))}
