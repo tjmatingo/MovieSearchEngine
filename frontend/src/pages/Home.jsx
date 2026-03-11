@@ -39,13 +39,19 @@ function Home() {
                 <input type="text" placeholder="Which Movie is it?" className="search-input" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                 <button type="submit" className="search-button">🔍</button>
             </form>
+
+                {error && <div className="error-message">{error} </div> }
             
-            <div className="movies-grid">
-                {/* looping array of objects in test data */}
-                {movies.map(movie => (
-                    movie.title.toLowerCase().startsWith(searchQuery) && <MovieCard movie={movie} key={movie.id}></MovieCard>
-                ))}
-            </div>
+            {loading ? 
+                <div className="loading">Loading...</div>
+                 : 
+                <div className="movies-grid">
+                    {/* looping array of objects in test data */}
+                    {movies.map(movie => (
+                        movie.title.toLowerCase().startsWith(searchQuery) && <MovieCard movie={movie} key={movie.id}></MovieCard>
+                    ))}
+                </div>
+            }
         </div>
     );
 }
