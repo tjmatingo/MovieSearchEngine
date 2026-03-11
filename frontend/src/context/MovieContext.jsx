@@ -30,13 +30,13 @@ export const MovieProvider = ({children}) => {
 
     // function to remove from  array 
     const removeFromFavourites = (movieID) => {
-        setFavourites(prev => prev.filter(movie => movie.ID !== movieID));
+        setFavourites(prev => prev.filter(movie => movie.id !== movieID));
     };
 
     // function to check existence
     const isFavourites = (movieID) => {
         // return true or false to a movie being in favourites
-        return favourites.some(movie => movie.ID === movieID)
+        return favourites.some(movie => movie.id === movieID)
     };
 
     // to make these values available to children
