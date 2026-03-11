@@ -32,7 +32,7 @@ function Home() {
         e.preventDefault();
         if (!searchQuery.trim()) return;
 
-        if (Loading) return;
+        if (loading) return;
 
 
         setLoading(true);
