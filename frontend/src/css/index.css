@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Gravitas One", serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -39,7 +41,7 @@ body {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #1bc6a9;
   text-decoration: inherit;
 }
 a:hover {
@@ -63,7 +65,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #a80d1a;
 }
 button:focus,
 button:focus-visible {
